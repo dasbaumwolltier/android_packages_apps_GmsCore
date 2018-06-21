@@ -10,7 +10,7 @@ KEYSTORES_PATH="keystores"
 
 # Generate keystore
 echo "We need to create a keystore for GmsCore:"
-keytool -genkey -v -keystore $KEYSTORES_PATH/playservices.jks -alias playservices -keyalg RSA -keysize 4096 -validity 10000 -keypass Litec123GmsCore
+keytool -genkey -v -keystore $KEYSTORES_PATH/playservices.jks -alias playservices -keyalg RSA -keysize 4096 -validity 10000 -keypass "itecceti123#GmsCore" -storepass "itecceti123#GmsCore"
 
 
 # GMSCore
@@ -25,5 +25,5 @@ cp play-services-core/build/outputs/apk/play-services-core-release-unsigned.apk 
 
 # Sign APK
 cd ../outputs
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore $KEYSTORES_PATH/playservices.jks play-services-core-release.apk playservices
-$ANDROID_SDK_PATH/build-tools/22.0.1/zipalign -p -v 4 play-services-core-release.apk com.google.android.gms.apk
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore $KEYSTORES_PATH/playservices.jks play-services-core-release.apk playservices $ANDROID_SDK_PATH/build-tools/22.0.1/zipalign -p -v 4 play-services-core-release.apk 
+com.google.android.gms.apk -keypass "itecceti123#GmsCore" -storepass "itecceti123#GmsCore"
