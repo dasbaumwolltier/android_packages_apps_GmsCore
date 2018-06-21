@@ -20,7 +20,7 @@ yes|keytool -genkey -v -keystore $KEYSTORES_PATH/playservices.jks -alias playser
 #echo "sdk.dir=$ANDROID_SDK_PATH" > local.properties
 #echo "sdk-location=$ANDROID_SDK_PATH" >> local.properties
 #./gradlew build
-cp play-services-core/build/outputs/apk/play-services-core-release-unsigned.apk ../outputs/play-services-core-release.apk
+cp play-services-core-release/build/outputs/apk/*-unsigned.apk ../outputs/play-services-core-release.apk
 
 
 # Sign APK
