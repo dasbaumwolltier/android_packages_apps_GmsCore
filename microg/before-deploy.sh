@@ -1,16 +1,16 @@
 #!/bin/bash
 
-mkdir microg
+mkdir -p microg
 cd microg
-mkdir outputs
-mkdir keystores
+mkdir -p outputs
+mkdir -p keystores
 
 ANDROID_SDK_PATH="/opt/android-sdk-update-manager"
 KEYSTORES_PATH="keystores"
 
 # Generate keystore
 echo "We need to create a keystore for GmsCore:"
-#keytool -genkey -v -keystore $KEYSTORES_PATH/playservices.jks -alias playservices -keyalg RSA -keysize 4096 -validity 10000
+# keytool -genkey -v -keystore $KEYSTORES_PATH/playservices.jks -alias playservices -keyalg RSA -keysize 4096 -validity 10000
 yes|keytool -genkey -v -keystore $KEYSTORES_PATH/playservices.jks -alias playservices -keyalg RSA -keysize 4096 -validity 10000 -storepass "liteclitec123#GmsCore" -keypass "liteclitec123#GmsCore"
 
 
