@@ -10,7 +10,7 @@ KEYSTORES_PATH="keystores"
 
 # Generate keystore
 echo "We need to create a keystore for GmsCore:"
-keytool -genkey -v -keystore $KEYSTORES_PATH/playservices.jks -alias playservices -keyalg RSA -keysize 4096 -validity 10000
+keytool -genkey -v -keystore $KEYSTORES_PATH/playservices.jks -alias playservices -keyalg RSA -keysize 4096 -validity 10000 -keypass Litec123GmsCore
 
 
 # GMSCore
