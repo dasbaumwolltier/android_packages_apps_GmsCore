@@ -26,4 +26,4 @@ cp play-services-core-release/build/outputs/apk/*-unsigned.apk ../outputs/play-s
 # Sign APK
 cd ../outputs
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore $KEYSTORES_PATH/playservices.jks play-services-core-release.apk playservices -keypass "itecceti123#GmsCore" -storepass "itecceti123#GmsCore"
-$ANDROID_SDK_PATH/build-tools/22.0.1/zipalign -p -v 4 play-services-core-release.apk com.google.android.gms.apk
+$ANDROID_SDK_PATH/build-tools/27.0.3/zipalign -p -v 4 play-services-core-release.apk com.google.android.gms.apk
