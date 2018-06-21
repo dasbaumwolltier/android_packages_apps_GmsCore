@@ -1,9 +1,9 @@
 #!/bin/bash
 
-mkdir microg
+mkdir -p microg
 cd microg
-mkdir outputs
-mkdir keystores
+mkdir -p outputs
+mkdir -p keystores
 
 ANDROID_SDK_PATH="/opt/android-sdk-update-manager"
 KEYSTORES_PATH="keystores"
