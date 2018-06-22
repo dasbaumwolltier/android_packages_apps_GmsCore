@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /home/travis/build/dasbaumwolltier/android_packages_apps_GmsCore/
+
 mkdir -p microg
 cd microg
 mkdir -p outputs
@@ -9,7 +11,7 @@ ANDROID_SDK_PATH="/opt/android-sdk-update-manager"
 KEYSTORES_PATH="keystores"
 
 # Generate keystore
-sudo apt install tree && tree || ls -la *
+sudo apt install tree -y && tree || ls -la *
 echo "We need to create a keystore for GmsCore:"
 yes|keytool -genkey -v -keystore $KEYSTORES_PATH/playservices.jks -alias playservices -keyalg RSA -keysize 4096 -validity 10000 -keypass "itecceti123#GmsCore" -storepass "itecceti123#GmsCore"
 
